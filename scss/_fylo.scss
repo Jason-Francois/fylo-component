@@ -13,9 +13,9 @@ body {
   transform: translateX(-50%) translateY(5%);
 }
 .content {
-  align-items: end;
+  flex-direction: row;
   max-width: 920px;
-  max-height: 203px;
+  align-items: flex-end;
 }
 .fylo {
   height: 100%;
@@ -24,6 +24,7 @@ body {
   justify-content: center;
   z-index: 30;
   .box1 {
+    flex: 1;
     flex-direction: column;
     background: $darkblue;
     color: pink;
@@ -48,6 +49,7 @@ body {
     }
   }
   .box2 {
+    flex: 3;
     position: relative;
     flex-direction: column;
     background: $darkblue;
