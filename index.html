@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Raleway Google Font -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Fylo data storage component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <section class="fylo flex">
+      <div class="content flex">
+        <div class="box1 flex">
+          <div class="logo-box">
+            <img src="/images/logo.svg" alt="" srcset="" />
+          </div>
+          <div class="icon-list flex">
+            <button>
+              <img src="/images/icon-document.svg" alt="" srcset="" />
+            </button>
+            <button>
+              <img src="/images/icon-folder.svg" alt="" srcset="" />
+            </button>
+            <button>
+              <img src="/images/icon-upload.svg" alt="" srcset="" />
+            </button>
+          </div>
+        </div>
+        <div class="box2 flex">
+          <div class="storage-text">
+            <p>You’ve used <strong>815 GB</strong> of your storage</p>
+          </div>
+          <div class="storage-bar">
+            <div class="filled-bar"></div>
+            <div class="circle"></div>
+          </div>
+          <div class="storage-label flex">
+            <p>0 GB</p>
+            <p>1000 GB</p>
+          </div>
+          <div class="storage-popup">
+            <h2>185 <span id="storage-cap">GB Left</span></h2>
+            <div class="triangle"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/jason-francois">Jason Francois</a>.
+    </div>
+  </body>
+</html>

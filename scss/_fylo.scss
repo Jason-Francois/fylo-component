@@ -1,0 +1,183 @@
+body {
+  background: $darkblue2;
+  position: relative;
+}
+.bg {
+  background: url("/images/bg-desktop.png");
+  width: 1440px;
+  height: 420px;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5%);
+}
+.content {
+  align-items: end;
+  max-width: 920px;
+  max-height: 203px;
+}
+.fylo {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+  .box1 {
+    flex-direction: column;
+    background: $darkblue;
+    color: pink;
+    margin-right: 1.875rem;
+    padding: 2.5rem 8.1325rem 2.5rem 2.5rem;
+    border-radius: 10px 100px 10px 10px;
+    .logo-box {
+      margin-bottom: 40px;
+    }
+    .icon-list {
+      button {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+        background: $darkblue2;
+        border: none;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  .box2 {
+    position: relative;
+    flex-direction: column;
+    background: $darkblue;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+    width: 540px;
+    height: 150px;
+    justify-content: center;
+    padding-left: 40px;
+    color: $paleblue;
+    .storage-text {
+      margin-top: 2rem;
+      p {
+        margin: 0;
+      }
+      margin-bottom: 1rem;
+    }
+    .storage-bar {
+      position: relative;
+      height: 18px;
+      border-radius: 10px;
+      width: 90.05%;
+      background: $darkblue2;
+      .filled-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 80%;
+        background: linear-gradient(
+          90deg,
+          hsl(6, 100%, 80%),
+          hsl(335, 100%, 65%)
+        );
+        border-radius: 10px;
+        z-index: 2;
+      }
+      .circle {
+        top: 4px;
+        right: 93px;
+        background: $paleblue;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        z-index: 5;
+      }
+    }
+    .storage-label {
+      width: 90%;
+      justify-content: space-between;
+      p {
+        font-weight: 700;
+      }
+      margin-bottom: 1rem;
+    }
+    .storage-popup {
+      text-align: center;
+      z-index: 8;
+      position: absolute;
+      width: 173px;
+      height: 71px;
+      color: $darkblue2;
+      background: white;
+      border-radius: 10px;
+      bottom: 116px;
+      right: 47px;
+      h2 {
+        margin: 13px;
+        font-size: 30px;
+        #storage-cap {
+          color: $grayblue;
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+      .triangle {
+        position: relative;
+        right: -142px;
+        top: -4px;
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-right: 1px solid transparent;
+        border-top: 35px solid white;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .content {
+    flex-direction: column;
+    .box1 {
+      width: 20rem;
+      height: 12.5rem;
+      padding-right: 0px;
+      margin-bottom: 1.25rem;
+      margin-right: 0px;
+    }
+    .box2 {
+      width: 20rem;
+      height: 10rem;
+      .storage-bar {
+        .circle {
+          right: 3.25rem;
+        }
+      }
+    }
+  }
+  body {
+    background: url(/images/bg-mobile.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center center;
+  }
+  .bg {
+    display: none;
+  }
+  .content {
+    .box2 {
+      .storage-popup {
+        bottom: -41px;
+        left: 67px;
+        .triangle {
+          display: none;
+        }
+      }
+    }
+  }
+}
